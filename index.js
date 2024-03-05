@@ -52,7 +52,7 @@ let agregar = true;
 
 do{
     let seleccionar = prompt(
-        "Elige un producto: \nVolkswagen Polo. \nVolkswagen Vento. \nVolkswagen Virtus. \n LOS PRECIOS DE LOS VEHICULOS NO INCLUYEN IVA."
+        "Elige un producto: \n1-Volkswagen Polo. \n2-Volkswagen Vento. \n3-Volkswagen Virtus."
     ).toLowerCase();
     let cuantos = parseInt(
         prompt("¿Cuantos modelos de " + seleccionar + " deseas comprar?")
@@ -76,11 +76,11 @@ do{
 
 //total compra sin impuestos:
 const compraSinIva = comprarProductos(carrito);
-console.log(compraSinIva.toFixed(2)); //toFixed(2) ajusta la cantidad de la compra a solo 2 decimales.
+console.log(compraSinIva); 
 
 //total compra con impuestos sin envio:
 const compraConIva = comprarProductos(carrito) * IVA;
-console.log(compraConIva.toFixed(2));
+console.log(compraConIva);
 
 //total compra con impuestos + envio:
 const compraConEnvio = comprarProductos(carrito) * IVA + envio;
